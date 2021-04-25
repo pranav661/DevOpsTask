@@ -8,37 +8,40 @@ lastName=$(echo $userName | cut -d " " -f2)
 regex="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$"
 mail=$(git config --get user.email)
 
+#Checking Commit Message Format
 if ! grep -qE "For Release" "$MSG";then
-    echo "Your commit message must contain the word 'For Release'"
+    echo "Your commit message must contain the word 'For Release'. Commit unsuccessful"
     exit 1
 fi
 
+#Checking Firstname Lastname in Git Username
 if [ -z "$userName" ]; then
-	echo "Git Username is empty. Please set it. Exiting Script"
+	echo "Git Username is empty. Please set it. Commit unsuccessful"
 	exit 1
 fi
 
 if [ "$words" != "2" ]; then
-	echo "Please set both Firstname and Lastname"
+	echo "Please set both Firstname and Lastname in Git Username. Commit unsuccessful"
 	exit 1
 fi
 
 if [[ ! "$firstName" =~ ^[A-Z][a-z]* ]]; then
-	echo "Firstname must be capital"
+	echo "Firstname must be capital in Git Username. Commit unsuccessful"
 	exit 1
 fi
 
 if [[ ! "$lastName" =~ ^[A-Z][a-z]* ]]; then
-        echo "Lasttname must be capital"
+        echo "Lasttname must be capital in Git Username. Commit unsuccessful"
         exit 1
 fi
 
+#Checking Git Email Format
 if [ -z "$mail" ]; then
-        echo "Git Email is empty. Please set it. Exiting Commit..."
+        echo "Git Email is empty. Please set it. Commit unsuccessful"
         exit 1
 fi
 
 if [[ ! "$mail" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$ ]]; then
-        echo "Email Format is not correctly set. Exiting Commit..."
+        echo "Email Format is not correctly set. Commit unsuccessful"
         exit 1
 fi
