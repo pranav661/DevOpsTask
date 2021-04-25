@@ -1,0 +1,27 @@
+#!/bin/bash
+
+userName=$(git config --get user.name)
+words=$(echo "$userName" | wc -w)
+firstName=$(echo $userName | cut -d " " -f1)
+lastName=$(echo $userName | cut -d " " -f2)
+
+if [ -z "$userName" ]; then
+	echo "Git Username is empty. Please set it. Exiting Script"
+	exit 1
+fi
+
+if [ "$words" != "2" ]; then
+	echo "Please set both Firstname and Lastname"
+	exit 1
+fi
+
+if [[ ! "$firstName" =~ ^[A-Z][a-z]* ]]; then
+	echo "Firstname must be capital"
+	exit 1
+fi
+
+if [[ ! "$lastName" =~ ^[A-Z][a-z]* ]]; then
+        echo "Lasttname must be capital"
+        exit 1
+fi
+
