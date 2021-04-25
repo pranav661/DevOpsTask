@@ -22,7 +22,7 @@ On any of Linux machine, fire the below commands :-
 
 1) Steps 1 and 2 remain same
 2) Give Execute permission to the hook script inside hooks folder by:-   chmod 755 hooks/*
-3) Configure the path of hooks on our local by:-   git config --local core.hooksPath hooks/
+3) Configure the path of hooks on our local by:-   git config --local core.hooksPath hooks/  (On some systems, this does not work, so we can use cp ./hooks/commit-msg ../.git/hooks/)
 4) Now do any changes, like create new file, or modify any file
 5) Now try to commit the changes by:-   git add -A && git commit -m "Testing"
 6) The above command of commit will not work. For it to work, we must use the commit message format and also set Username and Email for Git in proper format (As given in the quesion)                                                                                                                                                                
