@@ -12,6 +12,5 @@ On any of Linux machine, fire the below commands :-
 ./updateYamlConfig.sh spring.devtools.restart.enabled true
 ./updateYamlConfig.sh spring.mail.port 443
 
-Note:- I have used the contents from https://github.com/jhipster/jhipster-sample-app/blob/master/src/main/resources/config/a
-pplication-prod.yml for BigFile.yaml as the ones in the document provided had error in indentation
+Note:- I have used the contents from https://github.com/jhipster/jhipster-sample-app/blob/master/src/main/resources/config/application-prod.yml for BigFile.yaml as the ones in the document provided had error in indentation
 
