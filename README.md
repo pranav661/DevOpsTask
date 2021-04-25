@@ -27,7 +27,6 @@ On any of Linux machine, fire the below commands :-
 5) Now try to commit the changes by:-   git add -A && git commit -m "Testing"
 6) The above command of commit will not work. For it to work, we must use the commit message format and also set Username and Email for Git in proper format (As given in the quesion)                                                                                                                                                                
 7) For commit to work, following commands can be used :-                                                                                                                     
-   i) git config user.name "pranav"                                                                                                                                               
-   ii) git config user.email "pranav@gmail"                                                                                                                                       
+   i) git config user.name "Pranav Patil"                                                                                                                                         
+   ii) git config user.email "pranav@gmail.com"                                                                                                                                   
    iii) git commit -m "Testing complete, Ready For Release"
-
