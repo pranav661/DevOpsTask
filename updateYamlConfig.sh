@@ -13,4 +13,5 @@ fi
 #Checking whether the Key exists in the Yaml File
 if [[ $(cat BigFile.yaml | yq -r ".$1") == null ]]; then
         echo "Provided Key does not exist in the File. Exitting Script Execution..."
+        exit 0
 fi
