@@ -1,6 +1,6 @@
 # DevOpsTask
 
-Steps for Testing Assignment 1:-
+Steps for Testing Assignment Qsn 1:-
 
 On any of Linux machine, fire the below commands :-
 
@@ -13,4 +13,8 @@ On any of Linux machine, fire the below commands :-
 ./updateYamlConfig.sh spring.mail.port 443
 
 Note:- I have used the contents from https://github.com/jhipster/jhipster-sample-app/blob/master/src/main/resources/config/application-prod.yml for BigFile.yaml as the ones in the document provided had error in indentation
+
+
+
+Steps for Testing Assignment Qsn 3:-
 
